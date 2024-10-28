@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #ffebcd;
+}
+
+.App {
+  text-align: center;
+  background-color: #add8e6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: color-shift 5s infinite alternate;
+}
+
+.App-header {
+  background-color: #f08080;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 60px 20px;
+  border-bottom: 5px dotted #8a2be2;
+  width: 100%;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  transform: skew(0deg);
+  animation: tilt 0.8s ease-out;
+}
+
+.app-title {
+  margin: 0;
+  font-size: 3.5rem;
+  color: black;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+.info-text {
+  margin: 20px 0;
+  font-size: 1.5rem;
+  color: #8b4513;
+  width: 90%;
+  transform: rotate(0deg);
+}
+
+.input-form {
+  width: 100%;
+  max-width: 600px;
+  transform: skew(10deg, 8deg);
+  animation: float 6s ease-in-out infinite;
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 15px;
+  border: 2px dashed #ff1493;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+  background-color: #ffe4e1;
+  color: #ff4500;
+}
+
+.submit-button {
+  margin-top: 10px;
+  background-color: #4b0082;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  transition: transform 0.3s, background-color 0.3s;
+  padding: 10px 20px;
+  font-weight: bold;
+  animation: wiggle 2s infinite;
+}
+
+.submit-button:hover {
+  background-color: #ff69b4;
+  transform: scale(1.1) rotate(10deg);
+}
+
+.result-alert {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 20px;
+  background-color: #ffefd5;
+  color: #a52a2a;
+  border: 3px double #ff1493;
+  transform: rotate(0deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes color-shift {
+  from { background-color: #add8e6; }
+  to { background-color: #f08080; }
+}
+
+@keyframes tilt {
+  0% { transform: skew(-10deg); }
+  100% { transform: skew(-2deg); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(-5deg); }
+  75% { transform: rotate(5deg); }
+}
